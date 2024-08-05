@@ -5,9 +5,15 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from dotenv import load_dotenv
-import os 
+import os
+import logging
 
+# Load environment variables
 load_dotenv(override=True)
+
+# Configure logging
+logging.basicConfig(filename='/tmp/email_errors.log', level=logging.ERROR, 
+                    format='%(asctime)s %(levelname)s %(message)s')
 
 # Function to send an email
 def send_email(name, email, message):
@@ -34,7 +40,7 @@ def send_email(name, email, message):
         server.quit()
         return True
     except Exception as e:
-        print(e)
+        logging.error("Error sending email: %s", str(e))
         return False
 
 # Function to create the main page
