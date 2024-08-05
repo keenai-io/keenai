@@ -19,13 +19,11 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Deploy to Droplet
-        env:
-          APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
         run: |
           ssh -o StrictHostKeyChecking=no root@your_droplet_ip << 'EOF'
           export APP_PASSWORD="${{ secrets.APP_PASSWORD }}"
           cd /root/keenai
           git fetch origin
           git reset --hard origin/main
-          sudo systemctl restart nginx
+          systemctl restart streamlit
           EOF

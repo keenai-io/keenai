@@ -4,12 +4,8 @@ from st_aggrid import AgGrid, GridOptionsBuilder
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from dotenv import load_dotenv
 import os
 import logging
-
-# Load environment variables
-load_dotenv(override=True)
 
 # Configure logging
 logging.basicConfig(filename='/tmp/email_errors.log', level=logging.ERROR, 
