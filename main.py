@@ -21,7 +21,7 @@ def main_page():
 
 # Function to create the about page
 def about_page():
-    st.title("About KeenAI")
+    st.title("About KeenAI (Beta)")
     st.write("""
     KeenAI is at the forefront of AI-driven data querying technology. Our mission is to empower users to interact with their data intuitively and efficiently.
 
