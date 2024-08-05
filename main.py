@@ -4,7 +4,7 @@ from st_aggrid import AgGrid, GridOptionsBuilder
 
 # Function to create the main page
 def main_page():
-    st.title("Welcome to KeenAI (Test page)")
+    st.title("Welcome to KeenAI (Test page 2)")
     st.subheader("Transforming Text into SQL Queries Effortlessly")
     st.write("""
     KeenAI leverages advanced AI algorithms to convert natural language text into SQL queries. 
