@@ -20,7 +20,7 @@ jobs:
 
       - name: Deploy to Droplet
         run: |
-          ssh -o StrictHostKeyChecking=no root@your_droplet_ip << 'EOF'
+          ssh -o StrictHostKeyChecking=no root@159.203.176.36 << 'EOF'
           export APP_PASSWORD="${{ secrets.APP_PASSWORD }}"
           cd /root/keenai
           git fetch origin
