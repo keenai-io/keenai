@@ -21,7 +21,7 @@ jobs:
       - name: Deploy to Droplet
         run: |
           ssh -o StrictHostKeyChecking=no root@your_droplet_ip << 'EOF'
-          cd /root/your_repository
+          cd /root/keenai
           git pull origin main
           source venv/bin/activate
           pip install -r requirements.txt
