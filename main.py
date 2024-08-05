@@ -1,10 +1,45 @@
 import streamlit as st
 import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from dotenv import load_dotenv
+import os 
+
+load_dotenv(override=True)
+
+# Function to send an email
+def send_email(name, email, message):
+    sender_email = "admin@keenai.io"
+    receiver_email = "vince@keenai.io"
+    app_password = os.getenv("APP_PASSWORD")
+
+    # Create the email content
+    msg = MIMEMultipart()
+    msg["From"] = sender_email
+    msg["To"] = receiver_email
+    msg["Subject"] = f"New Contact Us Message from {name}"
+
+    # Create the email body
+    body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
+    msg.attach(MIMEText(body, "plain"))
+
+    # Send the email
+    try:
+        server = smtplib.SMTP("smtp.gmail.com", 587)
+        server.starttls()
+        server.login(sender_email, app_password)
+        server.sendmail(sender_email, receiver_email, msg.as_string())
+        server.quit()
+        return True
+    except Exception as e:
+        print(e)
+        return False
 
 # Function to create the main page
 def main_page():
-    st.title("Welcome to KeenAI (Test page 2)")
+    st.title("Welcome to KeenAI")
     st.subheader("Transforming Text into SQL Queries Effortlessly")
     st.write("""
     KeenAI leverages advanced AI algorithms to convert natural language text into SQL queries. 
@@ -21,7 +56,7 @@ def main_page():
 
 # Function to create the about page
 def about_page():
-    st.title("About KeenAI (Beta)")
+    st.title("About KeenAI")
     st.write("""
     KeenAI is at the forefront of AI-driven data querying technology. Our mission is to empower users to interact with their data intuitively and efficiently.
 
@@ -32,7 +67,7 @@ def about_page():
     We are a group of passionate AI and data experts committed to innovation and excellence. Our team combines deep technical expertise with a strong focus on user experience to deliver top-notch solutions.
 
     ### Comparison Table
-    Unlock the power of your company's structured and historical data with Keen AI's enhanced Text to SQL and Gen AI model embedded in your core platforms.
+    Unlock the power of your company's structured and historical data with KeenAI's enhanced Text to SQL and Gen AI model embedded in your core platforms.
     Leverage your current data while benefitting from retrieval tools based on YOUR data.
     """)
 
@@ -90,7 +125,10 @@ def contact_page():
         message = st.text_area("Message")
         submitted = st.form_submit_button("Submit")
         if submitted:
-            st.success("Thank you for reaching out! We'll get back to you soon.")
+            if send_email(name, email, message):
+                st.success("Thank you for reaching out! We'll get back to you soon.")
+            else:
+                st.error("There was an error sending your message. Please try again later.")
 
 # Sidebar for navigation
 st.sidebar.title("Navigation")
