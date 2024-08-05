@@ -20,9 +20,8 @@ jobs:
 
     - name: Deploy to Droplet
       run: |
-        ssh -o StrictHostKeyChecking=no root@159.203.176.36 '
-          cd /root/keenai &&
-          git pull origin main &&
-          pkill -f streamlit &&
-          nohup streamlit run main.py &
-        '
+        ssh -o StrictHostKeyChecking=no root@159.203.176.36 << 'EOF'
+        cd /root/keenai
+        git pull origin main
+        systemctl restart streamlit
+        EOF
