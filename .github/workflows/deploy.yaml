@@ -10,22 +10,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.5.3
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Deploy to Droplet
-        env:
-          APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
-        run: |
-          ssh -o StrictHostKeyChecking=no root@159.203.176.36 << 'EOF'
-          export APP_PASSWORD="${{ secrets.APP_PASSWORD }}"
-          cd /root/keenai
-          git fetch origin
-          git reset --hard origin/main
-          systemctl restart streamlit
-          EOF
+    - name: Deploy to Droplet
+      env:
+        APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
+
+    - name: Deploy to Droplet
+      run: |
+        ssh -o StrictHostKeyChecking=no root@159.203.176.36 << 'EOF'
+        cd /root/keenai
+        git fetch origin
+        git reset --hard origin/main
+        systemctl restart streamlit
+        EOF
