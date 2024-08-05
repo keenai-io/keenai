@@ -19,6 +19,10 @@ jobs:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
     - name: Deploy to Droplet
+      env:
+        APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
+
+    - name: Deploy to Droplet
       run: |
         ssh -o StrictHostKeyChecking=no root@159.203.176.36 << 'EOF'
         cd /root/keenai
