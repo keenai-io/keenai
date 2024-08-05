@@ -77,9 +77,8 @@ def contact_page():
     We'd love to hear from you! Whether you have a question about features, pricing, need a demo, or anything else, our team is ready to answer all your questions.
 
     ### Contact Information
-    - **Email:** support@keenai.com
-    - **Phone:** +1-234-567-890
-    - **Address:** 123 AI Drive, Tech City, TC 12345
+    - **Email:** vince@keenai.io
+    - **Phone:** +1-610-368-7379
 
     ### Get In Touch
     Fill out the form below and we'll get back to you as soon as possible.
