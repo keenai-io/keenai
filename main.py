@@ -21,6 +21,10 @@ def send_email(name, email, message):
     receiver_email = "vince@keenai.io"
     app_password = os.getenv("APP_PASSWORD")
 
+    if app_password is None:
+        logging.error("APP_PASSWORD environment variable is not set")
+        return False
+
     # Create the email content
     msg = MIMEMultipart()
     msg["From"] = sender_email
