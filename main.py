@@ -28,6 +28,8 @@ def send_email(name, email, message):
         print("APP_PASSWORD environment variable is not set")
         return False
 
+    print(f"APP_PASSWORD is set to: {app_password}")
+
     # Create the email content
     msg = MIMEMultipart()
     msg["From"] = sender_email
