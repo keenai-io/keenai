@@ -11,6 +11,7 @@ import logging
 logging.basicConfig(filename='/tmp/email_errors.log', level=logging.ERROR, format='%(asctime)s %(levelname)s %(message)s')
 
 # Function to send an email
+
 def send_email(name, email, message):
     sender_email = "admin@keenai.io"
     receiver_email = "vince@keenai.io"
@@ -21,14 +22,17 @@ def send_email(name, email, message):
         print("APP_PASSWORD environment variable is not set")
         return False
 
+    # Create the email content
     msg = MIMEMultipart()
     msg["From"] = sender_email
     msg["To"] = receiver_email
     msg["Subject"] = f"New Contact Us Message from {name}"
 
+    # Create the email body
     body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
     msg.attach(MIMEText(body, "plain"))
 
+    # Send the email
     try:
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
@@ -40,8 +44,6 @@ def send_email(name, email, message):
         logging.error("Error sending email: %s", str(e))
         print(f"Error sending email: {str(e)}")
         return False
-
-
 # Function to create the main page
 def main_page():
     st.title("Welcome to KeenAI")
