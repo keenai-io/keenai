@@ -19,10 +19,12 @@ jobs:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
     - name: Set environment variables
-      run: echo "APP_PASSWORD=${{ secrets.APP_PASSWORD }}" >> $GITHUB_ENV
+      run: |
+        echo "APP_PASSWORD=${{ secrets.APP_PASSWORD }}" >> $GITHUB_ENV
 
     - name: Verify environment variable
-      run: echo "APP_PASSWORD is set to: $APP_PASSWORD"
+      run: |
+        echo "APP_PASSWORD is set to: $APP_PASSWORD"
 
     - name: Deploy to Droplet
       run: |
