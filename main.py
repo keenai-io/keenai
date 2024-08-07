@@ -117,7 +117,7 @@ def about_page():
     grid_options = gb.build()
 
     # Displaying the table
-    AgGrid(df, gridOptions=grid_options, height=400, fit_columns on grid_load=True)
+    AgGrid(df, gridOptions=grid_options, height=400, fit_columns_on_grid_load=True)
 
 # Function to create the contact us page
 def contact_page():
