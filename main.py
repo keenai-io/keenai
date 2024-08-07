@@ -7,10 +7,8 @@ from email.mime.multipart import MIMEMultipart
 import os
 import logging
 
-
 # Configure logging
 logging.basicConfig(
-    filename='/tmp/email_errors.log',
     level=logging.ERROR,
     format='%(asctime)s %(levelname)s %(message)s',
     handlers=[
@@ -18,8 +16,8 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
-# Function to send an email
 
+# Function to send an email
 def send_email(name, email, message):
     sender_email = "admin@keenai.io"
     receiver_email = "vince@keenai.io"
@@ -52,9 +50,6 @@ def send_email(name, email, message):
         logging.error("Error sending email: %s", str(e))
         print(f"Error sending email: {str(e)}")
         return False
-
-
-
 
 # Function to create the main page
 def main_page():
@@ -122,7 +117,7 @@ def about_page():
     grid_options = gb.build()
 
     # Displaying the table
-    AgGrid(df, gridOptions=grid_options, height=400, fit_columns_on_grid_load=True)
+    AgGrid(df, gridOptions=grid_options, height=400, fit_columns on grid_load=True)
 
 # Function to create the contact us page
 def contact_page():
