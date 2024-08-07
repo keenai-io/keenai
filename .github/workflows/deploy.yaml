@@ -20,6 +20,7 @@ jobs:
 
     - name: Deploy to Droplet
       run: |
+        set -e
         output=$(ssh -o StrictHostKeyChecking=no root@159.203.176.36 << 'EOF'
         set -x
         cd /root/keenai
