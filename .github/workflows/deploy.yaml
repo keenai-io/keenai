@@ -36,4 +36,4 @@ jobs:
       env:
         APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
       run: |
-        python your_script.py
+        app.py
