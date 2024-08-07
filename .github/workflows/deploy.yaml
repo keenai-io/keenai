@@ -19,7 +19,9 @@ jobs:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
     - name: Set environment variables
-      run: echo "APP_PASSWORD=${{ secrets.APP_PASSWORD }}" >> $GITHUB_ENV
+      run: |
+        echo "APP_PASSWORD=${{ secrets.APP_PASSWORD }}" >> $GITHUB_ENV
+        echo "APP_PASSWORD=${{ secrets.APP_PASSWORD }}"
 
     - name: Deploy to Droplet
       run: |
@@ -29,3 +31,9 @@ jobs:
         git reset --hard origin/main
         systemctl restart streamlit
         EOF
+
+    - name: Run Script and Check Logs
+      env:
+        APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
+      run: |
+        python your_script.py

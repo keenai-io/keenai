@@ -7,9 +7,17 @@ from email.mime.multipart import MIMEMultipart
 import os
 import logging
 
-# Configure logging
-logging.basicConfig(filename='/tmp/email_errors.log', level=logging.ERROR, format='%(asctime)s %(levelname)s %(message)s')
 
+# Configure logging
+logging.basicConfig(
+    filename='/tmp/email_errors.log',
+    level=logging.ERROR,
+    format='%(asctime)s %(levelname)s %(message)s',
+    handlers=[
+        logging.FileHandler("/tmp/email_errors.log"),
+        logging.StreamHandler()
+    ]
+)
 # Function to send an email
 
 def send_email(name, email, message):
@@ -44,6 +52,10 @@ def send_email(name, email, message):
         logging.error("Error sending email: %s", str(e))
         print(f"Error sending email: {str(e)}")
         return False
+
+
+
+
 # Function to create the main page
 def main_page():
     st.title("Welcome to KeenAI")
