@@ -22,6 +22,8 @@ def send_email(name, email, message):
     sender_email = "admin@keenai.io"
     receiver_email = "vince@keenai.io"
     app_password = os.getenv("APP_PASSWORD")
+    logging.info('APP PASSWORD', app_password)
+    print('APP PASSWORD', app_password)
 
     if app_password is None:
         logging.error("APP_PASSWORD environment variable is not set")
