@@ -9,7 +9,7 @@ import logging
 
 # Configure logging
 logging.basicConfig(
-    level=logging.ERROR,
+    level=logging.INFO,  # Change to INFO to capture all levels
     format='%(asctime)s %(levelname)s %(message)s',
     handlers=[
         logging.FileHandler("/tmp/email_errors.log"),
@@ -22,17 +22,13 @@ def send_email(name, email, message):
     sender_email = "admin@keenai.io"
     receiver_email = "vince@keenai.io"
     app_password = os.getenv("APP_PASSWORD")
-    logging.info('APP PASSWORD', app_password)
-    print('APP PASSWORD', app_password)
+    logging.info('APP PASSWORD: %s', app_password)  # Correctly formatted log message
 
     if app_password is None:
         logging.error("APP_PASSWORD environment variable is not set")
-        print("APP_PASSWORD environment variable is not set")
-        print('APP PASSORD: ', os.getenv("APP_PASSWORD"))
-        logging.error('APP PASSORD: ', os.getenv("APP_PASSWORD"))
         return False
 
-    print(f"APP_PASSWORD is set to: {app_password}")
+    logging.info("APP_PASSWORD is set to: %s", app_password)  # Correctly formatted log message
 
     # Create the email content
     msg = MIMEMultipart()
@@ -54,7 +50,6 @@ def send_email(name, email, message):
         return True
     except Exception as e:
         logging.error("Error sending email: %s", str(e))
-        print(f"Error sending email: {str(e)}")
         return False
 
 # Function to create the main page
