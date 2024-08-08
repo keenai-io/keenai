@@ -24,10 +24,12 @@ jobs:
       run: |
         set -e
         ssh -o StrictHostKeyChecking=no root@159.203.176.36 << 'EOF'
-          export APP_PASSWORD=${APP_PASSWORD}
+          echo "Setting APP_PASSWORD environment variable"
+          echo "APP_PASSWORD=${APP_PASSWORD}" | sudo tee /etc/environment
           echo "APP_PASSWORD is set to: $APP_PASSWORD"
           cd /root/keenai
           git fetch origin
           git reset --hard origin/main
+          sudo systemctl daemon-reload
           sudo systemctl restart streamlit
         EOF
