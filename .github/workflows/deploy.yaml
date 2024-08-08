@@ -23,12 +23,10 @@ jobs:
         APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
       run: |
         set -e
-        output=$(ssh -o StrictHostKeyChecking=no root@159.203.176.36 << 'EOF'
-        set -x
-        cd /root/keenai
-        git fetch origin
-        git reset --hard origin/main
-        systemctl restart streamlit
+        ssh -o StrictHostKeyChecking=no root@159.203.176.36 << 'EOF'
+          export APP_PASSWORD=${APP_PASSWORD}
+          cd /root/keenai
+          git fetch origin
+          git reset --hard origin/main
+          systemctl restart streamlit
         EOF
-        )
-        echo "$output"
