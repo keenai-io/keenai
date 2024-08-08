@@ -26,6 +26,7 @@ def send_email(name, email, message):
     if app_password is None:
         logging.error("APP_PASSWORD environment variable is not set")
         print("APP_PASSWORD environment variable is not set")
+        print('APP PASSORD: ', os.getenv("APP_PASSWORD"))
         return False
 
     print(f"APP_PASSWORD is set to: {app_password}")
