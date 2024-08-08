@@ -29,6 +29,5 @@ jobs:
           cd /root/keenai
           git fetch origin
           git reset --hard origin/main
-          echo "Restarting Streamlit service with APP_PASSWORD"
           sudo systemctl restart streamlit
         EOF
