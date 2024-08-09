@@ -33,8 +33,10 @@ rich==13.7.1
 rpds-py==0.19.1
 six==1.16.0
 smmap==5.0.1
+st-theme==1.2.3
 streamlit==1.37.0
 streamlit-aggrid==1.0.5
+streamlit-navigation-bar==3.3.0
 tenacity==8.5.0
 toml==0.10.2
 toolz==0.12.1
