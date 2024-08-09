@@ -9,7 +9,7 @@ from components._partials.footer import add_footer
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
 
-st.set_page_config(page_title="KeenAI", page_icon="./static/img/favicon.ico", layout="wide")
+st.set_page_config(page_title="KeenAI", page_icon="./static/img/favicon.ico", layout="centered")
 
 current_page = get_current_page_from_navbar()
 
