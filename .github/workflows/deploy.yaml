@@ -30,7 +30,7 @@ jobs:
           cd /root/keenai
           git fetch origin
           git reset --hard origin/main
-          source /root/keenai/.venv/bin/activate  # Activate virtual environment if it exists
+          source /root/keenai/.venv/bin/activate
           pip install -r requirements.txt
           sudo systemctl daemon-reload
           sudo systemctl restart streamlit

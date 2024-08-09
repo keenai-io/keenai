@@ -1,7 +1,7 @@
 import streamlit as st
 
 def main_page():
-    st.title("Welcome to KeenAI 😼")
+    st.title("Welcome to KeenAI  😼")
     st.subheader("Transforming Text into SQL Queries Effortlessly")
     st.write("""
     KeenAI leverages advanced AI algorithms to convert natural language text into SQL queries. 

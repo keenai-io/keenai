@@ -1,7 +1,6 @@
 from streamlit_navigation_bar import st_navbar
 
 def get_current_page_from_navbar():
-    smirk_cat = "😼"
     styles = {
         "nav": {
             "background-color": "rgb(36, 37, 42)",
