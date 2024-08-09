@@ -5,6 +5,7 @@ from components.main_page import main_page
 from components.sandbox_page import sandbox_page
 from components.about_page import about_page
 from components.contact_page import contact_page
+from components.footer import add_footer
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
 
@@ -20,3 +21,5 @@ elif current_page == "About":
     about_page()
 elif current_page == "Contact Us":
     contact_page()
+
+add_footer()

@@ -5,10 +5,9 @@ def main_page():
     with ccol:
         st.image("static/img/keenai.png", use_column_width=True)
     st.title("Welcome to KeenAI  😼")
-    st.subheader("Transforming Text into SQL Queries Effortlessly")
+    st.subheader("Making Complex Data Querying Natural and Easy")
     st.write("""
-    KeenAI leverages advanced AI algorithms to convert natural language text into SQL queries. 
-    Our service is designed to help you query your database without needing to write complex SQL statements.
+    KeenAI harnesses cutting-edge AI to transform your natural language text into powerful SQL queries, delivering your database results in seconds without having to write a single line of SQL.
     """)
 
     # Add more content about the services offered
