@@ -30,26 +30,37 @@ add_footer()
 st.markdown(
     """
     <style>
-    /* Example of making text responsive */
+    /* Responsive text scaling */
     body, h1, h2, h3, h4, h5, h6 {
-        font-size: calc(10px + 1vmin);
+        font-size: calc(12px + 0.5vw);
     }
-    
-    /* Make sure your navbar collapses on smaller screens */
+
+    /* Navbar responsiveness */
     .navbar {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-around;
         align-items: center;
-    }
-    
-    .navbar-item {
-        margin-bottom: 10px;
     }
 
     @media only screen and (max-width: 600px) {
+        .navbar {
+            flex-direction: column;
+        }
+
         .navbar-item {
             font-size: 14px;
         }
+    }
+
+    /* Ensure all elements scale with screen size */
+    .container, .main {
+        max-width: 100%;
+        padding: 0 5%;
+    }
+
+    .footer {
+        margin-top: 2rem;
     }
     </style>
     """, unsafe_allow_html=True
