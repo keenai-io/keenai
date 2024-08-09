@@ -1,6 +1,14 @@
+name: Deploy to DigitalOcean
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -16,14 +24,14 @@ jobs:
       run: |
         set -e
         ssh -o StrictHostKeyChecking=no root@159.203.176.36 << 'EOF'
-        echo "Setting APP_PASSWORD environment variable"
-        echo "APP_PASSWORD=${APP_PASSWORD}" | sudo tee /etc/environment
-        echo "APP_PASSWORD is set to: $APP_PASSWORD"
-        cd /root/keenai
-        git fetch origin
-        git reset --hard origin/main
-        source /root/keenai/.venv/bin/activate
-        pip install -r requirements.txt
-        sudo systemctl daemon-reload
-        sudo systemctl restart streamlit
+          echo "Setting APP_PASSWORD environment variable"
+          echo "APP_PASSWORD=${APP_PASSWORD}" | sudo tee /etc/environment
+          echo "APP_PASSWORD is set to: $APP_PASSWORD"
+          cd /root/keenai
+          git fetch origin
+          git reset --hard origin/main
+          source /root/keenai/.venv/bin/activate  # Activate virtual environment if it exists
+          pip install -r requirements.txt
+          sudo systemctl daemon-reload
+          sudo systemctl restart streamlit
         EOF
