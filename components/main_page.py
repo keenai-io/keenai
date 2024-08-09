@@ -7,7 +7,7 @@ def main_page():
     st.title("Welcome to KeenAI  😼")
     st.subheader("Making Complex Data Querying Natural and Easy")
     st.write("""
-    KeenAI harnesses cutting-edge AI to transform your natural language text into powerful SQL queries, delivering your database results in seconds without having to write a single line of SQL.
+    KeenAI harnesses cutting-edge AI to transform your natural language text into powerful SQL queries, delivering your database results in seconds without you having to write a single line of SQL.
     """)
 
     # Add more content about the services offered
