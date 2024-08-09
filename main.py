@@ -1,11 +1,11 @@
 import logging
 import streamlit as st
-from components.navbar import get_current_page_from_navbar
+from components._partials.navbar import get_current_page_from_navbar
 from components.main_page import main_page
 from components.sandbox_page import sandbox_page
 from components.about_page import about_page
 from components.contact_page import contact_page
-from components.footer import add_footer
+from components._partials.footer import add_footer
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
 
