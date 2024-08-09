@@ -1,6 +1,9 @@
 import streamlit as st
 
 def main_page():
+    lcol, ccol, rcol = st.columns(3)
+    with ccol:
+        st.image("static/img/keenai.png", use_column_width=True)
     st.title("Welcome to KeenAI  😼")
     st.subheader("Transforming Text into SQL Queries Effortlessly")
     st.write("""

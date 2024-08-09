@@ -8,7 +8,7 @@ from components.contact_page import contact_page
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
 
-st.set_page_config(page_title="KeenAI", page_icon=":smirk_cat:", layout="wide")
+st.set_page_config(page_title="KeenAI", page_icon="./static/img/favicon.ico", layout="wide")
 
 current_page = get_current_page_from_navbar()
 
