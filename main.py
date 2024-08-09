@@ -8,7 +8,7 @@ import os
 import logging
 
 # Set the page configuration
-st.set_page_config(page_title="KeenAI", page_icon=":cat:", layout="wide")
+st.set_page_config(page_title="KeenAI", page_icon=":smirk_cat:", layout="wide")
 
 # Configure logging
 logging.basicConfig(
