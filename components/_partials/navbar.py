@@ -25,10 +25,14 @@ def get_current_page_from_navbar():
         "show_menu": False,
     }
 
-    # Include the smirk cat icon in the "Home" label
-    pages = ["Home", "Sandbox", "About", "Contact Us"]
+    pages = [
+        "Home", 
+        "Sandbox", 
+        "About", 
+        "Contact Us", 
+        # "Test Page"
+        ]
 
-    # Use st_navbar to render the navigation bar
     page = st_navbar(pages=pages, styles=styles, options=options)
 
     return page

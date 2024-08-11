@@ -1,10 +1,10 @@
-import json
 import streamlit as st
+from tabledai import PostgresDB
+import json
 from streamlit_option_menu import option_menu
 import pandas as pd
-from tabledai import PostgresDB
 
-def sandbox_page():
+def test_page():
     if 'history' not in st.session_state:
         st.session_state.history = []
     if 'responses' not in st.session_state:
