@@ -52,7 +52,7 @@ streamlit==1.37.0
 streamlit-aggrid==1.0.5
 streamlit-navigation-bar==3.3.0
 streamlit-option-menu==0.3.13
-tabledai==0.0.31
+tabledai==0.0.36
 tenacity==8.5.0
 toml==0.10.2
 toolz==0.12.1

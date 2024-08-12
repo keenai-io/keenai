@@ -1,0 +1,140 @@
+2024-08-11 21:35:52 - ERROR - --------------------------------------------------
+2024-08-11 21:35:52 - ERROR - Error for query: who is elvis
+2024-08-11 21:35:52 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE '%elvis%' AND artist IS NOT NULL;'
+2024-08-11 21:35:52 - ERROR - Error message: No data returned.
+2024-08-11 21:35:52 - ERROR - --------------------------------------------------
+
+2024-08-11 21:35:53 - ERROR - --------------------------------------------------
+2024-08-11 21:35:53 - ERROR - Error for query: who is elvis
+2024-08-11 21:35:53 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE 'elvis' AND artist IS NOT NULL;'
+2024-08-11 21:35:53 - ERROR - Error message: No data returned.
+2024-08-11 21:35:53 - ERROR - --------------------------------------------------
+
+2024-08-11 21:35:55 - ERROR - --------------------------------------------------
+2024-08-11 21:35:55 - ERROR - Error for query: who is elvis
+2024-08-11 21:35:55 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE '%elvis%' AND artist IS NOT NULL;'
+2024-08-11 21:35:55 - ERROR - Error message: No data returned.
+2024-08-11 21:35:55 - ERROR - --------------------------------------------------
+
+2024-08-11 21:35:55 - ERROR - Failed to generate SQL query for user questions:
+who is elvis
+2024-08-11 21:38:54 - ERROR - --------------------------------------------------
+2024-08-11 21:38:54 - ERROR - Error for query: who is elvis
+2024-08-11 21:38:54 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE '%elvis%' AND artist IS NOT NULL;'
+2024-08-11 21:38:54 - ERROR - Error message: No data returned.
+2024-08-11 21:38:54 - ERROR - --------------------------------------------------
+
+2024-08-11 21:38:54 - ERROR - --------------------------------------------------
+2024-08-11 21:38:54 - ERROR - Error for query: who is elvis
+2024-08-11 21:38:54 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE 'elvis' AND artist IS NOT NULL;'
+2024-08-11 21:38:54 - ERROR - Error message: No data returned.
+2024-08-11 21:38:54 - ERROR - --------------------------------------------------
+
+2024-08-11 21:38:55 - ERROR - --------------------------------------------------
+2024-08-11 21:38:55 - ERROR - Error for query: who is elvis
+2024-08-11 21:38:55 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE '%elvis%' AND artist IS NOT NULL;'
+2024-08-11 21:38:55 - ERROR - Error message: No data returned.
+2024-08-11 21:38:55 - ERROR - --------------------------------------------------
+
+2024-08-11 21:38:55 - ERROR - Failed to generate SQL query for user questions:
+who is elvis
+2024-08-11 21:40:37 - ERROR - --------------------------------------------------
+2024-08-11 21:40:37 - ERROR - Error for query: who is elvis
+2024-08-11 21:40:37 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE '%elvis%' AND artist IS NOT NULL;'
+2024-08-11 21:40:37 - ERROR - Error message: No data returned.
+2024-08-11 21:40:37 - ERROR - --------------------------------------------------
+
+2024-08-11 21:40:39 - ERROR - --------------------------------------------------
+2024-08-11 21:40:39 - ERROR - Error for query: who is elvis
+2024-08-11 21:40:39 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE '%elvis%' AND artist IS NOT NULL LIMIT 1;'
+2024-08-11 21:40:39 - ERROR - Error message: No data returned.
+2024-08-11 21:40:39 - ERROR - --------------------------------------------------
+
+2024-08-11 21:40:39 - ERROR - --------------------------------------------------
+2024-08-11 21:40:39 - ERROR - Error for query: who is elvis
+2024-08-11 21:40:39 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE '%elvis%' AND artist IS NOT NULL;'
+2024-08-11 21:40:39 - ERROR - Error message: No data returned.
+2024-08-11 21:40:39 - ERROR - --------------------------------------------------
+
+2024-08-11 21:40:39 - ERROR - Failed to generate SQL query for user questions:
+who is elvis
+2024-08-11 21:42:44 - ERROR - --------------------------------------------------
+2024-08-11 21:42:44 - ERROR - Error for query: who is elvis
+2024-08-11 21:42:44 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE '%elvis%' AND artist IS NOT NULL;'
+2024-08-11 21:42:44 - ERROR - Error message: No data returned.
+2024-08-11 21:42:44 - ERROR - --------------------------------------------------
+
+2024-08-11 21:42:45 - ERROR - --------------------------------------------------
+2024-08-11 21:42:45 - ERROR - Error for query: who is elvis
+2024-08-11 21:42:45 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE 'elvis' AND artist IS NOT NULL;'
+2024-08-11 21:42:45 - ERROR - Error message: No data returned.
+2024-08-11 21:42:45 - ERROR - --------------------------------------------------
+
+2024-08-11 21:42:46 - ERROR - --------------------------------------------------
+2024-08-11 21:42:46 - ERROR - Error for query: who is elvis
+2024-08-11 21:42:46 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE '%elvis%' AND artist IS NOT NULL;'
+2024-08-11 21:42:46 - ERROR - Error message: No data returned.
+2024-08-11 21:42:46 - ERROR - --------------------------------------------------
+
+2024-08-11 21:42:46 - ERROR - Failed to generate SQL query for user questions:
+who is elvis
+2024-08-11 21:44:23 - ERROR - --------------------------------------------------
+2024-08-11 21:44:23 - ERROR - Error for query: who is elvis
+2024-08-11 21:44:23 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE '%elvis%' AND artist IS NOT NULL;'
+2024-08-11 21:44:23 - ERROR - Error message: No data returned.
+2024-08-11 21:44:23 - ERROR - --------------------------------------------------
+
+2024-08-11 21:44:24 - ERROR - --------------------------------------------------
+2024-08-11 21:44:24 - ERROR - Error for query: who is elvis
+2024-08-11 21:44:24 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE 'elvis' AND artist IS NOT NULL;'
+2024-08-11 21:44:24 - ERROR - Error message: No data returned.
+2024-08-11 21:44:24 - ERROR - --------------------------------------------------
+
+2024-08-11 21:44:25 - ERROR - --------------------------------------------------
+2024-08-11 21:44:25 - ERROR - Error for query: who is elvis
+2024-08-11 21:44:25 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE '%elvis%' AND artist IS NOT NULL;'
+2024-08-11 21:44:25 - ERROR - Error message: No data returned.
+2024-08-11 21:44:25 - ERROR - --------------------------------------------------
+
+2024-08-11 21:44:25 - ERROR - Failed to generate SQL query for user questions:
+who is elvis
+2024-08-11 21:49:44 - ERROR - --------------------------------------------------
+2024-08-11 21:49:44 - ERROR - Error for query: who is elvis?
+2024-08-11 21:49:44 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE '%elvis%' AND artist IS NOT NULL;'
+2024-08-11 21:49:44 - ERROR - Error message: No data returned.
+2024-08-11 21:49:44 - ERROR - --------------------------------------------------
+
+2024-08-11 21:49:45 - ERROR - --------------------------------------------------
+2024-08-11 21:49:45 - ERROR - Error for query: who is elvis?
+2024-08-11 21:49:45 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE '%elvis%' AND artist IS NOT NULL;'
+2024-08-11 21:49:45 - ERROR - Error message: No data returned.
+2024-08-11 21:49:45 - ERROR - --------------------------------------------------
+
+2024-08-11 21:49:46 - ERROR - --------------------------------------------------
+2024-08-11 21:49:46 - ERROR - Error for query: who is elvis?
+2024-08-11 21:49:46 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE '%elvis%' AND artist IS NOT NULL;'
+2024-08-11 21:49:46 - ERROR - Error message: No data returned.
+2024-08-11 21:49:46 - ERROR - --------------------------------------------------
+
+2024-08-11 21:49:46 - ERROR - Failed to generate SQL query for user questions:
+who is elvis?
+2024-08-11 21:52:17 - ERROR - --------------------------------------------------
+2024-08-11 21:52:17 - ERROR - Error for query: who is elvis?
+2024-08-11 21:52:17 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE '%elvis%' AND artist IS NOT NULL;'
+2024-08-11 21:52:17 - ERROR - Error message: No data returned.
+2024-08-11 21:52:17 - ERROR - --------------------------------------------------
+
+2024-08-11 21:52:18 - ERROR - --------------------------------------------------
+2024-08-11 21:52:18 - ERROR - Error for query: who is elvis?
+2024-08-11 21:52:18 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE '%elvis%' AND artist IS NOT NULL;'
+2024-08-11 21:52:18 - ERROR - Error message: No data returned.
+2024-08-11 21:52:18 - ERROR - --------------------------------------------------
+
+2024-08-11 21:52:19 - ERROR - --------------------------------------------------
+2024-08-11 21:52:19 - ERROR - Error for query: who is elvis?
+2024-08-11 21:52:19 - ERROR - SQL: 'SELECT DISTINCT artist FROM pg_music_slim WHERE LOWER(artist) LIKE '%elvis%' AND artist IS NOT NULL;'
+2024-08-11 21:52:19 - ERROR - Error message: No data returned.
+2024-08-11 21:52:19 - ERROR - --------------------------------------------------
+
+2024-08-11 21:52:19 - ERROR - Failed to generate SQL query for user questions:
+who is elvis?

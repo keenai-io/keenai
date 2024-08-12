@@ -3,6 +3,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import pandas as pd
 from tabledai import PostgresDB
+from utils.send_email import send_email
 
 def sandbox_page():
     if 'history' not in st.session_state:
@@ -21,6 +22,8 @@ def sandbox_page():
 
             db = PostgresDB(name="demo_music")
             resp = db.query(user_input, generative=True)
+            if not resp.get('success'):
+                send_email("KeenAI Sandbox", "vince@keenai.io", str(resp))
 
             if 'generation' in resp:
                 st.session_state.responses["Answer"].append(resp.get('generation'))
