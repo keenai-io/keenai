@@ -26,12 +26,18 @@ jobs:
       run: |
         set -e
         ssh -o StrictHostKeyChecking=no root@159.203.176.36 << 'EOF'
-          echo "Setting APP_PASSWORD environment variable"
+          echo "Updating APP_PASSWORD environment variable"
+          sudo sed -i '/^APP_PASSWORD=/d' /etc/environment
           echo "APP_PASSWORD=${APP_PASSWORD}" | sudo tee -a /etc/environment
-          echo "Setting OPENAI_API_KEY environment variable"
+          
+          echo "Updating OPENAI_API_KEY environment variable"
+          sudo sed -i '/^OPENAI_API_KEY=/d' /etc/environment
           echo "OPENAI_API_KEY=${OPENAI_API_KEY}" | sudo tee -a /etc/environment
-          echo "Setting POSTGRES_CONNECTION_STRING environment variable"
+          
+          echo "Updating POSTGRES_CONNECTION_STRING environment variable"
+          sudo sed -i '/^POSTGRES_CONNECTION_STRING=/d' /etc/environment
           echo "POSTGRES_CONNECTION_STRING=${POSTGRES_CONNECTION_STRING}" | sudo tee -a /etc/environment
+
           cd /root/keenai
           git fetch origin
           git reset --hard origin/main
