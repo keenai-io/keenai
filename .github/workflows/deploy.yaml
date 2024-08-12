@@ -27,6 +27,12 @@ jobs:
           echo "Setting APP_PASSWORD environment variable"
           echo "APP_PASSWORD=${APP_PASSWORD}" | sudo tee /etc/environment
           echo "APP_PASSWORD is set to: $APP_PASSWORD"
+          echo "Setting OPENAI_API_KEY environment variable"
+          echo "OPENAI_API_KEY=${OPENAI_API_KEY}" | sudo tee /etc/environment
+          echo "OPENAI_API_KEY is set to: $OPENAI_API_KEY"
+          echo "Setting POSTGRES_CONNECTION_STRING environment variable"
+          echo "POSTGRES_CONNECTION_STRING=${POSTGRES_CONNECTION_STRING}" | sudo tee /etc/environment
+          echo "POSTGRES_CONNECTION_STRING is set to: $POSTGRES_CONNECTION_STRING"
           cd /root/keenai
           git fetch origin
           git reset --hard origin/main
