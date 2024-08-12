@@ -21,18 +21,17 @@ jobs:
     - name: Deploy to Droplet
       env:
         APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        POSTGRES_CONNECTION_STRING: ${{ secrets.POSTGRES_CONNECTION_STRING }}
       run: |
         set -e
         ssh -o StrictHostKeyChecking=no root@159.203.176.36 << 'EOF'
           echo "Setting APP_PASSWORD environment variable"
-          echo "APP_PASSWORD=${APP_PASSWORD}" | sudo tee /etc/environment
-          echo "APP_PASSWORD is set to: $APP_PASSWORD"
+          echo "APP_PASSWORD=${APP_PASSWORD}" | sudo tee -a /etc/environment
           echo "Setting OPENAI_API_KEY environment variable"
-          echo "OPENAI_API_KEY=${OPENAI_API_KEY}" | sudo tee /etc/environment
-          echo "OPENAI_API_KEY is set to: $OPENAI_API_KEY"
+          echo "OPENAI_API_KEY=${OPENAI_API_KEY}" | sudo tee -a /etc/environment
           echo "Setting POSTGRES_CONNECTION_STRING environment variable"
-          echo "POSTGRES_CONNECTION_STRING=${POSTGRES_CONNECTION_STRING}" | sudo tee /etc/environment
-          echo "POSTGRES_CONNECTION_STRING is set to: $POSTGRES_CONNECTION_STRING"
+          echo "POSTGRES_CONNECTION_STRING=${POSTGRES_CONNECTION_STRING}" | sudo tee -a /etc/environment
           cd /root/keenai
           git fetch origin
           git reset --hard origin/main
