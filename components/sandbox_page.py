@@ -78,7 +78,7 @@ def sandbox_page():
             with tab_objects[tabs.index("SQL")]:
                 st.session_state.tab_selection = 'SQL'
                 for sql in st.session_state.responses["SQL"]:
-                    st.markdown(f"{sql}")
+                    st.code(body=f"{sql}", language="sql")
 
             with tab_objects[tabs.index("JSON")]:
                 st.session_state.tab_selection = 'JSON'
