@@ -1,3 +1,4 @@
+import streamlit as st
 from streamlit_navigation_bar import st_navbar
 
 def get_current_page_from_navbar():
@@ -34,5 +35,4 @@ def get_current_page_from_navbar():
         ]
 
     page = st_navbar(pages=pages, styles=styles, options=options)
-
     return page
