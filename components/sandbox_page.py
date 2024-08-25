@@ -4,6 +4,10 @@ from streamlit_option_menu import option_menu
 import pandas as pd
 from tabledai import PostgresDB
 from utils.send_email import send_email
+from dotenv import load_dotenv
+import os
+
+load_dotenv(override=True)
 
 def sandbox_page():
     if 'history' not in st.session_state:
@@ -20,7 +24,7 @@ def sandbox_page():
             st.session_state.history.append(("User", user_input))
             st.session_state.current_question = user_input
 
-            db = PostgresDB(name="demo_music")
+            db = PostgresDB(name="demo_music", postgres_connection_string=os.getenv("POSTGRES_CONNECTION_STRING"))
             resp = db.query(user_input, generative=True)
             if not resp.get('success'):
                 send_email("KeenAI Sandbox", "vince@keenai.io", str(resp))
